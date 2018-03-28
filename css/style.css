@@ -1,0 +1,658 @@
+/* things controlled with pre-defined classes....................... */
+/* text-color:
+bg-color:
+gradient: */
+
+
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+    height: auto;
+    max-width: 100%;
+}
+/*....................mini reset ends............................*/
+
+
+/*....................Color...................................*/
+:root {
+  --lighter-black: #404041;
+  --light-black: #1c1b20;
+  --black: #141315;
+  --pure-black: #000000;
+  --white: #ffffff;
+  --red: #fd3e5b;
+  --light-pink: #ffb7b7;
+  --elevito-gradient: linear-gradient(to right, #FD3E5B, #F98E37);
+  --elevito-gradient: -webkit-gradient(linear, left top, right top, from(#FD3E5B), to(#F98E37));
+  --nav-transition-time: 0.3s ease-in-out;
+}
+
+
+
+/* ...................common properties........................ */
+
+html,body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: var(--white);
+}
+
+
+/* ........................font-sizes........................... */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+/* ...............text and background formatting........................ */
+
+.text-white {
+  color: var(--white);
+}
+.text-black {
+  color: var(--pure-black);
+}
+.text-light-black {
+  color: var(--light-black);
+}
+.text-lighter-black {
+  color: var(--lighter-black);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.bg-light-black {
+  background-color: var(--light-black);
+}
+.bg-lighter-black {
+  background-color: var(--lighter-black);
+}
+.bg-pure-black {
+  background-color: var(--pure-black);
+}
+.bg-gradient-red-yellow {
+  background: var(--elevito-gradient);
+}
+
+.text-regular {
+  font-weight: 400 !important;
+}
+.text-semi-bold {
+  font-weight: 700 !important;
+}
+.text-bold {
+  font-weight: 900 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.small-line::after {
+  content: '';
+  display: block;
+  width: 6%;
+  height: 3px;
+  background-color: #de302f;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+/* .................float properties...................... */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.float-none {
+  float: none !important;
+}
+
+/* ...................image-size handeling................... */
+.img-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img-contain img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* ....................content handeling classes...................... */
+.center-content {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.put-center {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ................... elements pre-formatted................... */
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--light-pink); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--light-pink); /* Gecko Browsers */
+}
+
+
+/* ...........................used custom classes............................ */
+#header {
+  position: relative;
+  min-height: 500px;
+  min-height: 90vh;
+}
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+.logo {
+  width: 150px;
+  margin: 20px;
+}
+.logo svg {
+  fill: #fff;
+  -webkit-transition: fill var(--nav-transition-time);
+  transition: fill var(--nav-transition-time);
+}
+.header-image {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.menu-btn {
+  width: 40px;
+  height: 35px;
+  position: relative;
+  margin: 20px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+.menu-btn span:nth-child(1) {
+  top: 0px;
+}
+
+.menu-btn span:nth-child(2) {
+  top: 11px;
+  left: -8px;
+}
+
+.menu-btn span:nth-child(3) {
+  top: 22px;
+}
+
+.menu-btn.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.menu-btn.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+.info-in-white {
+  position: relative;
+  widows: 100%;
+  min-height: 600px;
+}
+.menu {
+  -webkit-transition: background .3s linear;
+  transition: background .3s linear;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+}
+.menu.check {
+  visibility: visible;
+  background: #fff;
+  top: 0;
+}
+
+.nav-link-content {
+  position: absolute;
+  right: 80px;
+  top: 54%;
+  transform: translate(0, -50%);
+}
+.nav-links {
+  padding: 100px 70px 0 0;
+  background: var(--red);
+  background: var(--elevito-gradient);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+  display: block;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 65%;
+}
+.nav-links a {
+  color: var(--white);
+  display: block;
+  line-height: 10px;
+  padding: 30px 10px;
+  text-align: right;
+  text-decoration: none;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.nav-links a:hover {
+  color: var(--lighter-black);
+}
+.nav-links.open-nav {
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.first-grid-size {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.grid-property {
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  /* use paading-top to maintain aspect ratio  */
+  grid-gap: 5px;
+  background: var(--white);
+  margin-bottom: 5px;
+}
+.first-grid-size .item1 {
+  position: relative;
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+.first-grid-size .item2 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+.first-grid-size .item3 {
+  grid-column: 5/7;
+  grid-row: 1/3;
+}
+.first-grid-size .item4 {
+  grid-column: 1/3;
+  grid-row: 4/7;
+}
+.first-grid-size .item5 {
+  grid-column: 3/7;
+  grid-row: 3/7;
+}
+
+.second-grid-size {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.second-grid-size .item1 {
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+.second-grid-size .item2 {
+  grid-column: 4/7;
+  grid-row: 1/4;
+}
+.second-grid-size .item3 {
+  grid-column: 1/3;
+  grid-row: 4/6;
+}
+.second-grid-size .item4 {
+  grid-column: 3/5;
+  grid-row: 4/6;
+}
+.second-grid-size .item5 {
+  grid-column: 5/7;
+  grid-row: 4/6;
+}
+
+.third-grid-size {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.third-grid-size .item1 {
+  grid-column: 1/5;
+  grid-row: 1/5;
+}
+.third-grid-size .item2 {
+  grid-column: 5/7;
+  grid-row: 1/4;
+}
+.third-grid-size .item3 {
+  grid-column: 1/3;
+  grid-row: 5/7;
+}
+.third-grid-size .item4 {
+  grid-column: 3/5;
+  grid-row: 5/7;
+}
+.third-grid-size .item5 {
+  grid-column: 5/7;
+  grid-row: 4/7;
+}
+.hover-content {
+  position: relative;
+}
+.secondary-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
+.hover-content:hover .secondary-content, .hover-content:active .secondary-content {
+  opacity: 1;
+}
+
+#section-c {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* position: relative; */
+}
+.left, .right {
+  position: relative;
+}
+.hover-info-left, .hover-info-right {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+  cursor: pointer;
+}
+.hover-info-show {
+  opacity: 1;
+}
+.hover-info-hide {
+  opacity: 0;
+}
+.footer-wrapper {
+  min-height: 500px;
+  width: 70%;
+  margin: auto;
+  padding: 120px 0 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer-content-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.footer-content-flex .tagline p:nth-child(3) {
+  margin-top: 30px;
+}
+.footer-content-flex:nth-child(2) {
+  margin-top: 100px;
+}
+.footer-content-flex .contact div {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.elevito-mail {
+  margin-top: 10px;
+}
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.links .icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+/* these classes are for SVG........................... */
+.cls-1 {
+  fill: #fff;
+}
+.cls-2 {
+  fill:#424143;
+}

@@ -85,6 +85,7 @@ video {
   --light-black: #1c1b20;
   --black: #141315;
   --pure-black: #000000;
+  --gray: #B7B7B7;
   --white: #ffffff;
   --red: #fd3e5b;
   --light-pink: #ffb7b7;
@@ -180,6 +181,9 @@ small,
 .text-black {
   color: var(--pure-black);
 }
+.text-red {
+  color: var(--red);
+}
 .text-light-black {
   color: var(--light-black);
 }
@@ -235,6 +239,12 @@ small,
   margin-top: 4px;
   margin-bottom: 10px;
 }
+.line-medium.small-line::after {
+  width: 9%;
+}
+.line-large.small-line::after {
+  width: 12%;
+}
 
 /* .................float properties...................... */
 .clearfix::after {
@@ -268,7 +278,7 @@ small,
 
 /* ....................content handeling classes...................... */
 .center-content {
-  width: 60%;
+  min-width: 60%;
   margin: auto;
   padding: 20px;
   position: absolute;
@@ -277,14 +287,6 @@ small,
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.modal-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  cursor: pointer;
-}
 .put-center {
   display: flex;
   flex-direction: row;
@@ -292,7 +294,24 @@ small,
   justify-content: center;
   align-items: center;
 }
-
+.cover-whole-box {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.btn {
+  border: 2px solid var(--white);
+  background: none;
+  padding: 0.1em 1em;
+  display: block;
+  width: 150px;
+  margin: auto;
+  margin-top: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  background: var(--black);
+  border: 2px solid var(--black);
+}
 /* ................... elements pre-formatted................... */
 a {
   color: #007bff;
@@ -300,6 +319,24 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   cursor: pointer;
+}
+button, form, input, label, select, textarea {
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  border: none;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  background: 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -332,10 +369,7 @@ a {
   -webkit-transition: fill var(--nav-transition-time);
   transition: fill var(--nav-transition-time);
 }
-.header-image {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
+
 .menu-btn {
   width: 40px;
   height: 35px;
@@ -392,7 +426,7 @@ a {
 
 .info-in-white {
   position: relative;
-  widows: 100%;
+  width: 100%;
   min-height: 600px;
 }
 .menu {
@@ -554,11 +588,13 @@ a {
   bottom: 0;
   cursor: pointer;
   opacity: 0;
+  z-index: 1;
   transition: opacity .3s ease-in-out;
   -moz-transition: opacity .3s ease-in-out;
   -webkit-transition: opacity .3s ease-in-out;
 }
 
+/* give the class hover-content to any block to make elements appear on hover.......... */
 .hover-content:hover .secondary-content, .hover-content:active .secondary-content {
   opacity: 1;
 }
@@ -649,10 +685,210 @@ a {
   margin-right: 10px;
 }
 
-/* these classes are for SVG........................... */
-.cls-1 {
-  fill: #fff;
+
+/*..........................services page.............................*/
+#love-me-more {
+  display: flex;
+  width: 90%;
+  padding: 90px;
+  margin: auto;
+  justify-content: space-between;
 }
-.cls-2 {
+.box {
+  margin-right: 30px;
+}
+.box:nth-child(3) {
+  margin-right: 0;
+}
+
+#services-grid {
+  padding: 6em 5em;
+}
+.services-box-wrapper {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  grid-gap: 10px;
+}
+.services-box {
+  position: relative;
+  width: 100%;
+  background: var(--pure-black);
+  cursor: pointer;
+}
+.services-box::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+/* ..........makes content in the center.................. */
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services-box svg {
+  width: 30%; /*  SVG ICON SIZE CONTROL */
+  position: absolute;
+  top: 20%; /* ICON POSITION CONTROL */
+  opacity: 1;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.project-name {
+  display: block;
+  padding: 0 5px;
+  position: absolute;
+  top: 70%; /*PROJECT_NAME POSITION CONTROL */
+  width: 100%;
+  transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+.hover-after-content {
+  bottom: -10%;
+  opacity: 0;
+  /* padding: 0 20px; */
+  transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+}
+
+/* on hover............. */
+.services-box:hover svg, .services-box:active svg {
+  opacity: 0;
+  top: 40%;
+}
+.services-box:hover .project-name, .services-box:active .project-name {
+  opacity: 0;
+  top: 90%;
+}
+.services-box:hover .hover-after-content, .services-box:active .hover-after-content {
+  opacity: 1;
+  bottom: 0;
+}
+
+#link-to-about {
+  position: relative;
+  height: 300px;
+}
+
+
+
+/* ..........................contact.html........................... */
+#contact-form {
+  padding: 50px;
+}
+.form-content {
+  width: 70%;
+  margin: auto;
+  padding: 5% 0 5% 0;
+  border-bottom: 1px solid var(--gray);
+}
+.collapsed {
+  max-height: 44px
+}
+.form-content textarea.collapsed:focus {
+  max-height: 170px
+}
+.form-content label {
+  display: block;
+  padding-left: 150px;
+  margin: 0 0 24px;
+}
+.form-content span {
+  padding: 0 10px 0 0;
+  white-space: nowrap;
+  width: 1px;
+}
+.form-content input {
+  border-bottom: 1px solid var(--gray);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 10px;
+}
+.form-content input:focus,
+.form-content textarea:focus {
+  border-color: #648AF7;
+  color: var(--red);
+}
+.form-content textarea {
+  width: 70%;
+  background: var(--white);
+  border: 1px solid var(--gray);
+  background-clip: padding-box;
+  border-radius: 5px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  max-height: 140px;
+  margin: 5px 0 0;
+  padding: 10px;
+  resize: none;
+  transition: all 0.2s;
+}
+.btn-send {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 50px auto 0;
+  color: var(--red);
+  cursor: pointer;
+  transform: rotate(0);
+  border-radius: 50%;
+  border: 6px solid var(--red);
+  transition: all 0.3s;
+  background-clip: padding-box;
+  -webkit-backface-visibility: hidden;
+}
+.btn-send span {
+  padding: 0;
+}
+.btn-send:hover {
+  transform: rotate(45deg);
+  color: var(--white);
+  background: linear-gradient(45deg,#FD3E5B ,#F98E37);
+}
+.links-content {
+  width: 70%;
+  margin: auto;
+  padding: 50px 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.link-blocks {
+  margin: 10px;
+}
+.link-icon img {
+  width: 60%;
+}
+.link-info p:nth-child(1) {
+  margin: 5px;
+}
+.link-info p:nth-child(2) {
+  margin-top: 15px;
+  cursor: pointer;
+}
+.link-info p:nth-child(2):hover {
+  text-decoration: underline;
+}
+
+
+
+/* these classes are for SVG........................... */
+.icon .cls-1 {
+  fill: #fff;
+  stroke: none;
+}
+.icon .cls-2 {
   fill:#424143;
+  stroke: none;
 }

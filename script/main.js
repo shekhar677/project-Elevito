@@ -5,27 +5,22 @@ var check = document.getElementById('check');
 
 // these elements are targeted to handle color of nav-bar
 var header = document.getElementById('header');
-var sectionA = document.getElementById('section-a');
-var sectionB = document.getElementById('section-b');
-var sectionD = document.getElementById('section-d');
 var projectGrid = document.getElementById('project-grid-first');
 var left = document.querySelector('.left');
 var right = document.querySelector('.right');
 var leftInfo = document.querySelector('.hover-info-left');
 var rightInfo = document.querySelector('.hover-info-right');
 
+var sectionA = document.getElementById('section-a');
+var sectionB = document.getElementById('section-b');
+var sectionD = document.getElementById('section-d');
+var sectionE = document.getElementById('section-e');
+var loveMeMore = document.getElementById('love-me-more');
+var contactForm = document.getElementById('contact-form');
+
 // element to change on scroll at certain point
 var logo = document.getElementById('logo');
 var bar = document.getElementsByClassName('bar');
-
-
-//display content on other side
-left.addEventListener('mouseover', function(event) {
-  leftInfo.classList.toggle('hover-info-show');
-});
-left.addEventListener('mouseleave', function(event) {
-  leftInfo.classList.toggle('hover-info-hide');
-});
 
 // show menu function............
 menuBtn.addEventListener('click', function() {
@@ -49,8 +44,10 @@ function changeToBlack() {
   }
 }
 
+// ................EVENT LISTENER FOR index.html............................
+
 window.addEventListener('scroll', function() {
-  var currentScrollPos = window.pageYOffset; 
+  var currentScrollPos = window.pageYOffset;
 
   // for section-a info-in-white
   if(currentScrollPos > sectionA.offsetTop && currentScrollPos < (sectionA.offsetHeight + sectionA.offsetTop)) {
@@ -59,12 +56,77 @@ window.addEventListener('scroll', function() {
   // for section-b info-in-white
   else if(currentScrollPos > sectionB.offsetTop && currentScrollPos < (sectionB.offsetHeight + sectionB.offsetTop)) {
     changeToBlack();
-  } 
+  }
   // for section-d info-in-white
   else if(currentScrollPos > sectionD.offsetTop && currentScrollPos < (sectionD.offsetHeight + sectionD.offsetTop)) {
     changeToBlack();
-  } 
+  }
   else {
     changeToWhite();
   }
 });
+
+
+// ...........................EVENT LISTENER FOR projects.html............................
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // for section-e info-in-white
+  if(currentScrollPos > sectionE.offsetTop && currentScrollPos < (sectionE.offsetHeight + sectionE.offsetTop)) {
+    changeToBlack();
+  }
+  else {
+    changeToWhite();
+  }
+});
+
+// .............................EVENT LISTENER FOR services.html.............................
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // for section-e info-in-white
+  if(currentScrollPos > loveMeMore.offsetTop && currentScrollPos < (loveMeMore.offsetHeight + loveMeMore.offsetTop)) {
+    changeToBlack();
+  }
+  else {
+    changeToWhite();
+  }
+});
+
+
+// .............................EVENT LISTENER FOR contact.html.............................
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // for section-e info-in-white
+  if(currentScrollPos > contactForm.offsetTop && currentScrollPos < (contactForm.offsetHeight + contactForm.offsetTop)) {
+    changeToBlack();
+  }
+  else {
+    changeToWhite();
+  }
+});
+
+
+// //this listenes for mouseover for projects-
+//
+// window.addEventListener("resize", function() {
+//   var size = document.documentElement.clientWidth;
+//   if( size < 768) {
+//     console.log('its ok');
+//     for(var i=0; i< servicesBox.length; i++) {
+//         servicesBox[i].addEventListener('click', function() {
+//           servicesBox[i].classList.toggle('services-hover');
+//         });
+//     }
+//   }
+// });
+
+
+// //display content on other side
+// left.addEventListener('mouseover', function(event) {
+//   leftInfo.classList.toggle('hover-info-show');
+// });
+// left.addEventListener('mouseleave', function(event) {
+//   leftInfo.classList.toggle('hover-info-hide');
+// });

@@ -184,6 +184,9 @@ small,
 .text-red {
   color: var(--red);
 }
+.text-gray {
+  color: var(--gray);
+}
 .text-light-black {
   color: var(--light-black);
 }
@@ -235,9 +238,12 @@ small,
   display: block;
   width: 6%;
   height: 3px;
-  background-color: #de302f;
+  background-color: var(--red);
   margin-top: 4px;
   margin-bottom: 10px;
+}
+.line-minimum.small-line::after {
+  width: 3%;
 }
 .line-medium.small-line::after {
   width: 9%;
@@ -726,55 +732,69 @@ button, form, input, label, select, textarea {
 /* ..........makes content in the center.................. */
 .content {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.services-box svg {
-  width: 30%; /*  SVG ICON SIZE CONTROL */
+.project-icon svg {
+  display: block;
+  width: 200px;
+  height: 200px;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.project-icon {
   position: absolute;
-  top: 20%; /* ICON POSITION CONTROL */
-  opacity: 1;
-  overflow: hidden;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
 }
-.project-name {
-  display: block;
-  padding: 0 5px;
-  position: absolute;
-  top: 70%; /*PROJECT_NAME POSITION CONTROL */
-  width: 100%;
-  transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
+.project-icon p {
+  margin-top: 15px;
 }
 .hover-after-content {
-  bottom: -10%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 0.8rem;
+  transform: translateY(10%);
   opacity: 0;
-  /* padding: 0 20px; */
   transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
+}
+.hover-after-content p {
+  margin-bottom: 8px;
+}
+.hover-after-content p::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  width: 3px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 50%;
 }
 
 /* on hover............. */
-.services-box:hover svg, .services-box:active svg {
+.services-box:hover .project-icon, .services-box:active .project-icon {
   opacity: 0;
-  top: 40%;
-}
-.services-box:hover .project-name, .services-box:active .project-name {
-  opacity: 0;
-  top: 90%;
+  transform: translateY(10%);
 }
 .services-box:hover .hover-after-content, .services-box:active .hover-after-content {
   opacity: 1;
-  bottom: 0;
+  transform: translateY(0);
 }
 
 #link-to-about {
@@ -795,10 +815,10 @@ button, form, input, label, select, textarea {
   border-bottom: 1px solid var(--gray);
 }
 .collapsed {
-  max-height: 44px
+  max-height: 20px;
 }
-.form-content textarea.collapsed:focus {
-  max-height: 170px
+textarea.collapsed:focus {
+  max-height: 170px;
 }
 .form-content label {
   display: block;
@@ -871,17 +891,118 @@ button, form, input, label, select, textarea {
   width: 60%;
 }
 .link-info p:nth-child(1) {
-  margin: 5px;
+  margin: 5px 0 15px 0;
 }
 .link-info p:nth-child(2) {
-  margin-top: 15px;
+  display: block;
   cursor: pointer;
 }
 .link-info p:nth-child(2):hover {
-  text-decoration: underline;
+  color: var(--lighter-black);
 }
 
+#join-our-team {
+  position: relative;
+  overflow: hidden;
+}
+.join-rectangle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  right: 10%; bottom: -10px;
+  border: 8px solid var(--white);
+}
+.join {
+  width: 200px;
+  position: relative;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.learn-more {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+/*...............................about.html................................*/
+#elevit-ahead {
+  position: relative;
+  background: var(--white);
+}
+.about-elevito {
+  width: 80%;
+  margin: auto;
+  padding: 0 10%;
+}
+.info {
+  position: relative;
+  margin-top: 40px;
+}
+.info .elevito-icon {
+  float: right;
+  width: 20%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.info svg {
+  width: 100px;
+}
+.elevito-info {
+  width: 80%;
+  float: left;
+}
+.elevito-info p {
+  margin-bottom: 15px;
+}
+#who-we-are {
+  position: relative;
+  padding: 50px 0;
+}
+
+#behind-scene {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  justify-content: end;
+  padding: 90px;
+}
+.scene::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+.scene {
+  position: relative;
+}
+.box5 {
+  position: relative;
+  grid-column: 2/3;
+}
+#behind-scene .content {
+  display: flex;
+  flex-direction: column;
+}
+#behind-scene .content p {
+  width: 80%;
+}
+#behind-scene .content svg {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.scene-link {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  align-items: center;
+  align-self: flex-start;
+}
 
 /* these classes are for SVG........................... */
 .icon .cls-1 {

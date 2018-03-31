@@ -17,6 +17,7 @@ var sectionD = document.getElementById('section-d');
 var sectionE = document.getElementById('section-e');
 var loveMeMore = document.getElementById('love-me-more');
 var contactForm = document.getElementById('contact-form');
+var elevitoAhead = document.getElementById('elevito-ahead');
 
 // element to change on scroll at certain point
 var logo = document.getElementById('logo');
@@ -107,6 +108,18 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// ................................EVENT LISTENER FOR about.html..........................
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // for section-e info-in-white
+  if(currentScrollPos > elevitoAhead.offsetTop && currentScrollPos < (elevitoAhead.offsetHeight + elevitoAhead.offsetTop)) {
+    changeToBlack();
+  }
+  else {
+    changeToWhite();
+  }
+});
 
 // //this listenes for mouseover for projects-
 //

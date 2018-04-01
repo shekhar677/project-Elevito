@@ -85,12 +85,17 @@ video {
 	--light-black: #1c1b20;
 	--black: #141315;
 	--pure-black: #000000;
+	--elevito-gray: #707579;
 	--gray: #B7B7B7;
 	--light-gray: #f4f4f6;
 	--white: #ffffff;
 	--red: #fd3e5b;
+	--light-red: #e82c43;
+	--yellow: #ffcf4e;
+	--slate-blue: #626d98;
 	--light-pink: #ffb7b7;
 	--elevito-gradient: linear-gradient(to right, #FD3E5B, #F98E37);
+	--bbdtimes-gradient: linear-gradient(to right, #6adfff, #005094);
 	--elevito-gradient: -webkit-gradient(linear, left top, right top, from(#FD3E5B), to(#F98E37));
 	--nav-transition-time: 0.3s ease-in-out;
 }
@@ -329,6 +334,9 @@ small,
 .float-none {
 	float: none !important;
 }
+.hide-overflow {
+	overflow: hidden;
+}
 
 /* ...................image-size handeling................... */
 
@@ -389,6 +397,106 @@ small,
 .btn:hover {
 	background: var(--black);
 	border: 2px solid var(--black);
+}
+
+/*..............Individual project section.........................*/
+
+
+.close-project-btn {
+	font-size: 70px;
+	padding: 0 10px 0 0;
+	cursor: pointer;
+	transform: scale(1);
+	transition: all 0.3s;
+}
+.close-project-btn:hover {
+	transform: scale(1.08);
+}
+
+.project-container {
+	position: relative;
+	width: 100%;
+	max-height: 600px; /* Fall Back */
+	max-height: 100vh;
+}
+
+.project-detail {
+	display: flex;
+	flex-direction: row;
+	padding: 100px;
+}
+.info-left {
+	border-right: 2px solid var(--black);
+	padding-right: 15px;
+	flex: 30;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.info-right {
+	padding-left: 10%;
+	flex: 70;
+}
+.info-left-top {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.section-c-info-left {
+	display: flex;
+	align-items: center;
+	flex: 60;
+	border-right: 2px solid var(--black);
+}
+.section-c-info-left img {
+	width: 70px;
+	margin-right: 10px;
+}
+.section-c-info-left img:nth-child(4) {
+	width: 100px;
+	margin-right: 0;
+}
+.section-c-info-right {
+	flex: 40;
+	padding-left: 30px;
+}
+.info-right-content {
+	padding-left: 20px;
+}
+.yes-btn {
+	padding: 0.5em 1.5em;
+	border-radius: 3px;
+}
+.bottom-space {
+	margin-bottom: 600px;
+	margin-bottom: 100vh;
+}
+.next-project {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+	top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+	background: var(--bbdtimes-gradient);
+}
+.next-project h1 {
+	margin-bottom: 100px;
+}
+.next-project-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.project-box {
+	position: relative;
+	margin-right: 20px;
+}
+.project-box:nth-child(2) {
+	margin-right: 0;
 }
 
 /* ................... elements pre-formatted................... */
@@ -1282,6 +1390,27 @@ textarea.collapsed:focus {
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 }
+
+
+/*...............project sections............*/
+.margin-bottom-50 {
+	margin-bottom: 50px;
+}
+#bbdtimes-section-f {
+	position: relative;
+	background: var(--slate-blue);
+}
+#bbdtimes-section-k, #dearzindagi-section-d, #dearzindagi-section-i {
+	position: relative;
+	background: var(--elevito-gray);
+}
+#awesomeinc-section-i, #awesomeinc-section-f {
+	background: var(--yellow);
+}
+#dearzindagi-section-g {
+	background: var(--light-red);
+}
+
 /* these classes are for SVG........................... */
 
 .icon .cls-1 {

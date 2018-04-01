@@ -93,9 +93,18 @@ video {
 	--light-red: #e82c43;
 	--yellow: #ffcf4e;
 	--slate-blue: #626d98;
+	--royal-blue: #003748;
+	--sky-blue: #25a9e0;
+	--dark-blue: #0e2a39;
+	--tbt-blue: #005463;
 	--light-pink: #ffb7b7;
+	--r3-blue: #286b90;
 	--elevito-gradient: linear-gradient(to right, #FD3E5B, #F98E37);
 	--bbdtimes-gradient: linear-gradient(to right, #6adfff, #005094);
+	--gobeyond-gradient: linear-gradient(to right, #469e9c, #006894);
+	--reimagine-gradient: linear-gradient(-37.2deg, #f57f3c ,#f83e5b);
+	--happymiles-gradient: linear-gradient(to bottom, #d30248, #900248);
+	--r3-gradient: linear-gradient(to bottom, #e9805c, #d83b73);
 	--elevito-gradient: -webkit-gradient(linear, left top, right top, from(#FD3E5B), to(#F98E37));
 	--nav-transition-time: 0.3s ease-in-out;
 }
@@ -416,10 +425,16 @@ small,
 .project-container {
 	position: relative;
 	width: 100%;
-	max-height: 600px; /* Fall Back */
-	max-height: 100vh;
+/*	max-height: 600px; /* Fall Back */
+/*	min-height: 100vh;*/
 }
 
+/*
+.cover-vh-height {
+	min-height: 500px;
+	min-height: 100vh;
+}
+*/
 .project-detail {
 	display: flex;
 	flex-direction: row;
@@ -433,6 +448,7 @@ small,
 	flex-direction: column;
 	justify-content: center;
 }
+
 .info-right {
 	padding-left: 10%;
 	flex: 70;
@@ -1410,6 +1426,40 @@ textarea.collapsed:focus {
 #dearzindagi-section-g {
 	background: var(--light-red);
 }
+#elevito-section-b .info-left {
+	border-right: 2px solid var(--white);
+}
+#elevito-section-e, #elevito-section-g {
+	background: var(--gobeyond-gradient);
+}
+#elevito-section-i {
+	background: var(--reimagine-gradient);
+}
+#happymiles-section-b {
+	background: var(--royal-blue);
+}
+#happymiles-section-b .info-left {
+	border-right: 2px solid var(--white);
+}
+#happymiles-section-k {
+	background: var(--happymiles-gradient);
+}
+#hindigiri-section-d {
+	background: var(--sky-blue);
+}
+#ialse-section-g, #ialse-section-m {
+	background: var(--dark-blue);
+}
+#r3-section-a {
+	background: var(--r3-gradient);
+}
+#r3-section-e {
+	background: var(--r3-blue);
+}
+#tbtapp-section-d, #tbtapp-section-g, #tbtapp-section-h {
+	background: var(--tbt-blue);
+}
+
 
 /* these classes are for SVG........................... */
 

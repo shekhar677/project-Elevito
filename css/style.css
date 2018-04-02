@@ -305,7 +305,7 @@ small,
 .small-line::after {
 	content: '';
 	display: block;
-	width: 6%;
+	width: 0.7em;
 	height: 3px;
 	background-color: var(--red);
 	margin-top: 4px;
@@ -1009,7 +1009,7 @@ textarea {
 .project-icon svg {
 	display: block;
 	width: 200px;
-	height: 200px;
+	height: 150px;
 	width: 30%;
 	margin-right: auto;
 	margin-left: auto;
@@ -1487,6 +1487,14 @@ textarea.collapsed:focus {
 /* .................................................................................... */
 /* .................................................................................... */
 /* .................................................................................... */
+@media screen and (max-width: 991px) {
+	#love-me-more {
+    padding: 80px 20px;
+		width: 100%;
+		font-weight: normal;
+	}
+
+
 @media screen and (max-width: 768px) {
 	html, body {
 		font-size: 0.85rem;
@@ -1529,7 +1537,14 @@ textarea.collapsed:focus {
 	.info-in-white .center-content p.h5 {
 		font-size: 1.2rem;
 	} */
+	.services-box-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+	}
+	.project-icon p.h6 {
+		font-size: 1.3rem;
+	}
 }
+
 
 @media screen and (max-width: 575px) {
 	html, body {
@@ -1561,5 +1576,15 @@ textarea.collapsed:focus {
     flex-direction: column;
 		/* padding: 0px 10px 0 10px; */
 		padding: 0;
+	}
+	#love-me-more {
+		flex-direction: column;
+    padding: 80px 30px;
+	}
+	#love-me-more .box {
+    margin-bottom: 20px;
+	}
+	.services-box-wrapper {
+    grid-template-columns: repeat(1, 1fr);
 	}
 }

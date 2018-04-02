@@ -148,7 +148,7 @@ h6,
 
 h1,
 .h1 {
-	font-size: 2.5rem;
+	font-size: 2.4rem;
 }
 
 h2,
@@ -224,7 +224,7 @@ small,
 
 small,
 .small {
-	font-size: 80%;
+	font-size: 90%;
 	font-weight: 400;
 }
 
@@ -1486,6 +1486,9 @@ textarea.collapsed:focus {
 /* .................................................................................... */
 /* .................................................................................... */
 @media screen and (max-width: 768px) {
+	html, body {
+		font-size: 0.85rem;
+	}
 	.menu.check {
 		width: 0;
 	}
@@ -1498,19 +1501,38 @@ textarea.collapsed:focus {
 		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 	}
-	.nav-link-content a.h1 {
+	/* .nav-link-content a.h1 {
 		font-size: 2.3rem;
 	}
 	footer .tagline p.h1 {
 		font-size: 2.2rem;
-	}
+	} */
 	.footer-wrapper {
 		width: 80%;
     padding: 80px 0 10px 0;
 	}
+	.center-content {
+    min-width: 95%;
+    padding: 20px;
+	}
+	/* header .center-content p.h2 {
+    font-size: 1.8rem;
+	} */
+	.info-in-white {
+    min-height: 500px;
+	}
+	/* .info-in-white .center-content h1.h1 {
+		font-size: 2rem;
+	}
+	.info-in-white .center-content p.h5 {
+		font-size: 1.2rem;
+	} */
 }
 
 @media screen and (max-width: 575px) {
+	html, body {
+    font-size: 0.8rem;
+	}
 	.nav-link-content {
 		right: 40px;
 		top: 50%;
@@ -1530,5 +1552,11 @@ textarea.collapsed:focus {
 	.links {
     width: 100%;
     justify-content: space-around;
+	}
+	/* .....grid handeling............. */
+	.grid-property {
+		display: flex;
+    flex-direction: column;
+		padding: 0px 10px 0 10px;
 	}
 }

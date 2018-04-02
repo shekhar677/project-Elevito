@@ -108,6 +108,9 @@ video {
 	--bharatrohan-gradient: linear-gradient(to right, #8fa66d, #5ba44c);
 	--elevito-gradient: -webkit-gradient(linear, left top, right top, from(#FD3E5B), to(#F98E37));
 	--nav-transition-time: 0.3s ease-in-out;
+
+	/* .............color for individual project thumbnail....... */
+	
 }
 
 
@@ -356,6 +359,7 @@ small,
 /* ...................image-size handeling................... */
 
 .img-cover img {
+	display: block;
 	width: 100%;
 	height: 100%;
 	-o-object-fit: cover;
@@ -363,6 +367,7 @@ small,
 }
 
 .img-contain img {
+	display: block;
 	width: 100%;
 	height: 100%;
 	-o-object-fit: contain;
@@ -1667,8 +1672,11 @@ textarea.collapsed:focus {
 	.grid-property {
 		display: flex;
     flex-direction: column;
-		/* padding: 0px 10px 0 10px; */
+		margin-bottom: 0px;
 		padding: 0;
+	}
+	#header div.bg-black {
+	  margin-bottom: 0px;
 	}
 	#love-me-more {
 		flex-direction: column;

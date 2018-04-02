@@ -1553,10 +1553,10 @@ textarea.collapsed:focus {
     font-size: 1.9rem;
 	}
 	.some-company-wrapper {
-    width: 100%;
+    width: 90%;
 	}
 	.company {
-    margin: 80px 40px;
+    margin: 80px 0px;
 	}
 }
 
@@ -1625,6 +1625,9 @@ textarea.collapsed:focus {
 	}
 	.article .article-img {
 		grid-row: 1/2;
+	}
+	.img-content::before {
+    padding-bottom: 50%;
 	}
 	.company {
     margin: 50px 20px;

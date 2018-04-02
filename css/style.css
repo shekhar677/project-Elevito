@@ -124,6 +124,11 @@ body {
 	background: var(--white);
 }
 
+body, button, form, input, label, select, textarea {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 /* ........................font-sizes........................... */
 
@@ -1090,10 +1095,9 @@ textarea {
 }
 
 .form-content {
-	width: 70%;
+	max-width: 500px;
 	margin: auto;
 	padding: 5% 0 5% 0;
-	border-bottom: 1px solid var(--gray);
 }
 
 .collapsed {
@@ -1106,8 +1110,9 @@ textarea.collapsed:focus {
 
 .form-content label {
 	display: block;
-	padding-left: 150px;
+	padding-left: 0px;
 	margin: 0 0 24px;
+	font-size: 1rem;
 }
 
 .form-content span {
@@ -1120,6 +1125,7 @@ textarea.collapsed:focus {
 	border-bottom: 1px solid var(--gray);
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 10px;
+	width: 50%;
 }
 
 .form-content input:focus,
@@ -1129,7 +1135,7 @@ textarea.collapsed:focus {
 }
 
 .form-content textarea {
-	width: 70%;
+	width: 90%;
 	background: var(--white);
 	border: 1px solid var(--gray);
 	background-clip: padding-box;
@@ -1175,6 +1181,7 @@ textarea.collapsed:focus {
 	display: flex;
 	text-align: center;
 	justify-content: space-between;
+	border-top: 1px solid var(--gray);
 }
 
 .link-blocks {
@@ -1501,12 +1508,6 @@ textarea.collapsed:focus {
 		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 	}
-	/* .nav-link-content a.h1 {
-		font-size: 2.3rem;
-	}
-	footer .tagline p.h1 {
-		font-size: 2.2rem;
-	} */
 	.footer-wrapper {
 		width: 80%;
     padding: 80px 0 10px 0;
@@ -1515,18 +1516,9 @@ textarea.collapsed:focus {
     min-width: 95%;
     padding: 20px;
 	}
-	/* header .center-content p.h2 {
-    font-size: 1.8rem;
-	} */
 	.info-in-white {
     min-height: 500px;
 	}
-	/* .info-in-white .center-content h1.h1 {
-		font-size: 2rem;
-	}
-	.info-in-white .center-content p.h5 {
-		font-size: 1.2rem;
-	} */
 	.services-box-wrapper {
     grid-template-columns: repeat(2, 1fr);
 	}
@@ -1557,6 +1549,36 @@ textarea.collapsed:focus {
 	}
 	.company {
     margin: 80px 0px;
+	}
+	#contact-form {
+    padding: 50px 0;
+	}
+	.form-content {
+    padding: 40px 10px;
+	}
+	.form-content input {
+		display: block;
+		width: 100%;
+	}
+	.form-content span {
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin-bottom: 10px;
+	}
+	.form-content textarea {
+		width: 100%;
+	}
+	.btn-send span {
+		font-size: 1.5rem;
+    margin-bottom: 0px;
+	}
+	.links-content {
+		width: 100%;
+	}
+	.join-rectangle {
+    width: 250px;
+    height: 250px;
 	}
 }
 
@@ -1632,5 +1654,20 @@ textarea.collapsed:focus {
 	.company {
     margin: 50px 20px;
 	}
-
+	.join-rectangle {
+    width: 200px;
+    height: 200px;
+	}
+	.join-rectangle .join p {
+		font-size: 1.5rem;
+	}
+	.learn-more p {
+		font-size: 1.2rem;
+	}
+	.links-content {
+		flex-direction: column;
+	}
+	.link-icon img {
+    width: 30%;
+	}
 }

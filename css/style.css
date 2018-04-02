@@ -105,6 +105,7 @@ video {
 	--reimagine-gradient: linear-gradient(-37.2deg, #f57f3c ,#f83e5b);
 	--happymiles-gradient: linear-gradient(to bottom, #d30248, #900248);
 	--r3-gradient: linear-gradient(to bottom, #e9805c, #d83b73);
+	--bharatrohan-gradient: linear-gradient(to right, #8fa66d, #5ba44c);
 	--elevito-gradient: -webkit-gradient(linear, left top, right top, from(#FD3E5B), to(#F98E37));
 	--nav-transition-time: 0.3s ease-in-out;
 }
@@ -514,10 +515,9 @@ small,
 }
 .project-box {
 	position: relative;
-	margin-right: 20px;
 }
-.project-box:nth-child(2) {
-	margin-right: 0;
+.next-project-wrapper a:first-of-type {
+	margin-right: 20px;
 }
 
 /* ................... elements pre-formatted................... */
@@ -1431,6 +1431,9 @@ textarea.collapsed:focus {
 #elevito-section-i {
 	background: var(--reimagine-gradient);
 }
+#filmingeye-section-b .info-left {
+	border-right: 2px solid var(--white);
+}
 #happymiles-section-b {
 	background: var(--royal-blue);
 }
@@ -1454,6 +1457,12 @@ textarea.collapsed:focus {
 }
 #tbtapp-section-d, #tbtapp-section-g, #tbtapp-section-h {
 	background: var(--tbt-blue);
+}
+#bharatrohan-section-f {
+	background: var(--bharatrohan-gradient);
+}
+#bharatrohan-section-h {
+	background: var(--gray);
 }
 
 
@@ -1489,6 +1498,7 @@ textarea.collapsed:focus {
 	}
 	p.h6 {
 		font-weight: normal;
+		font-size: 1rem;
 	}
 
 
@@ -1579,6 +1589,52 @@ textarea.collapsed:focus {
 	.join-rectangle {
     width: 250px;
     height: 250px;
+	}
+
+	/* ..............project-styles................. */
+	.project-detail {
+    flex-direction: column;
+    padding: 40px;
+	}
+	.project-detail .info-left, .section-c-info-left {
+		order: 2;
+    border-top: 1px solid var(--black);
+		border-right: 0;
+		padding: 20px 0 0 0;
+	}
+	.project-detail .info-right {
+		padding-left: 0;
+		margin-bottom: 20px;
+	}
+	.project-detail .info-left-top {
+    margin-bottom: 10px;
+	}
+	.section-c-info-left {
+		justify-content: center;
+	}
+	.section-c-info-right {
+    padding-left: 0px;
+		margin-bottom: 20px;
+	}
+	.info-right-content {
+    padding-left: 0px;
+		margin-bottom: 10px;
+	}
+	.section-c-info-left img:nth-child(4) {
+    width: 70px;
+    margin-right: 0;
+	}
+	#happymiles-section-b .info-left {
+		border-top: 2px solid var(--white);
+		border-right: 0;
+	}
+	#elevito-section-b .info-left {
+		border-top: 1px solid var(--white);
+		border-right: 0;
+	}
+	#filmingeye-section-b .info-left {
+		border-top: 1px solid var(--white);
+		border-right: 0;
 	}
 }
 

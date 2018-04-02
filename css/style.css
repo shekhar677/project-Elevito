@@ -566,7 +566,9 @@ textarea {
 	min-height: 500px;
 	min-height: 90vh;
 }
-
+#header div.bg-black {
+  margin-bottom: 5px;
+}
 .navigation-bar {
 	position: fixed;
 	top: 0;
@@ -1534,7 +1536,7 @@ textarea.collapsed:focus {
     font-size: 0.8rem;
 	}
 	.nav-link-content {
-		right: 40px;
+		right: 65px;
 		top: 50%;
 	}
 	footer .tagline {
@@ -1557,6 +1559,7 @@ textarea.collapsed:focus {
 	.grid-property {
 		display: flex;
     flex-direction: column;
-		padding: 0px 10px 0 10px;
+		/* padding: 0px 10px 0 10px; */
+		padding: 0;
 	}
 }

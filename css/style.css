@@ -1472,3 +1472,63 @@ textarea.collapsed:focus {
 	fill: #424143;
 	stroke: none;
 }
+
+
+
+
+
+
+
+
+
+/* ............................MEDIA QUERIES....................................... */
+/* .................................................................................... */
+/* .................................................................................... */
+/* .................................................................................... */
+@media screen and (max-width: 768px) {
+	.menu.check {
+		width: 0;
+	}
+	.nav-links {
+		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+		width: 100%;
+	}
+	.nav-links.open-nav {
+		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+	}
+	.nav-link-content a.h1 {
+		font-size: 2.3rem;
+	}
+	footer .tagline p.h1 {
+		font-size: 2.2rem;
+	}
+	.footer-wrapper {
+		width: 80%;
+    padding: 80px 0 10px 0;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.nav-link-content {
+		right: 40px;
+		top: 50%;
+	}
+	footer .tagline {
+    margin-bottom: 35px;
+	}
+	.footer-content-flex {
+    flex-direction: column;
+	}
+	.footer-content-flex .contact div {
+    margin-bottom: 20px;
+	}
+	.footer-content-flex:nth-child(2) {
+    margin-top: 50px;
+	}
+	.links {
+    width: 100%;
+    justify-content: space-around;
+	}
+}

@@ -22,7 +22,7 @@ var weWrite = document.getElementById('we-write');
 var articleGist = document.getElementById('article-gist');
 var someCompany = document.getElementById('some-company');
 
-// element to change on scroll at certain point
+// element to change on scroll at certain point (navbar)
 var logo = document.getElementById('logo');
 var bar = document.getElementsByClassName('bar');
 

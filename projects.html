@@ -6,6 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquery plugin -->
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+
+	<!-- responsive slide javascript -->
+	<script src="script/responsiveslides.js"></script>
+
+	<!-- my slider script -->
+	<script>
+	$(function() {
+		$(".rslides").responsiveSlides({
+		auto: true,
+		timeout: 4000,
+		speed: 1000,
+		pager: false,
+		nav: false,
+		navContainer: ".rslides",
+		});
+	});
+	</script>
+
+	<!-- responsive slide css -->
+	<link rel="stylesheet" href="css/responsiveslides.css">
+
   <title>Our Works</title>
 </head>
 <body>
@@ -15,7 +42,7 @@
     <nav class="navigation-bar clearfix">
       <div class="logo float-left">
         <a href="index.html">
-          <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.52 47.93"><defs></defs><title>logoelevito</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M15.34,12.1v5.69H37V29.43H15.34v5.76H39.82V46.83H0V.46H39.22V12.1Z"/><path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" d="M80.29,34.06V46.83H45.63V.46H61v33.6Z"/><path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" d="M99.61,35.19V29.44H121.3V17.79H99.61V12.1h23.87v0L117.1.46H84.26V46.83h39.82V35.19Z"/><path id="_Compound_Path_4" data-name="&lt;Compound Path&gt;" d="M184.09.9,177.88,13V47.27h15.34V.9Z"/><path id="_Compound_Path_5" data-name="&lt;Compound Path&gt;" d="M228.69,13V47.27H213.35V13H200.19V.9h41.73V13Z"/><path id="_Compound_Path_6" data-name="&lt;Compound Path&gt;" d="M295.52,24.05c0,13.76-10.72,23.88-25.47,23.88s-25.46-10-25.46-23.88S255.3.44,270.05.44,295.52,10.36,295.52,24.05Zm-35.19.07c0,6.35,4.63,11.05,9.92,11.05s9.52-4.7,9.52-11-4.23-10.91-9.52-10.91S260.33,17.77,260.33,24.12Z"/><polygon points="125.33 0 176.52 0 150.97 46.37 125.33 0"/></g></g></svg>
+          <svg id="logo" class="logo-adjust" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.52 47.93"><defs></defs><title>logoelevito</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M15.34,12.1v5.69H37V29.43H15.34v5.76H39.82V46.83H0V.46H39.22V12.1Z"/><path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" d="M80.29,34.06V46.83H45.63V.46H61v33.6Z"/><path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" d="M99.61,35.19V29.44H121.3V17.79H99.61V12.1h23.87v0L117.1.46H84.26V46.83h39.82V35.19Z"/><path id="_Compound_Path_4" data-name="&lt;Compound Path&gt;" d="M184.09.9,177.88,13V47.27h15.34V.9Z"/><path id="_Compound_Path_5" data-name="&lt;Compound Path&gt;" d="M228.69,13V47.27H213.35V13H200.19V.9h41.73V13Z"/><path id="_Compound_Path_6" data-name="&lt;Compound Path&gt;" d="M295.52,24.05c0,13.76-10.72,23.88-25.47,23.88s-25.46-10-25.46-23.88S255.3.44,270.05.44,295.52,10.36,295.52,24.05Zm-35.19.07c0,6.35,4.63,11.05,9.92,11.05s9.52-4.7,9.52-11-4.23-10.91-9.52-10.91S260.33,17.77,260.33,24.12Z"/><polygon points="125.33 0 176.52 0 150.97 46.37 125.33 0"/></g></g></svg>
         </a>
       </div>
 
@@ -41,144 +68,210 @@
       </div>
     </nav>
 
-<!-- ........................header-bg................................. -->
-    <div class="cover-whole-box bg-black">
-        <div class="center-content">
-            <p class="text-semi-bold text-white text-center h1">It's not what you say,</p>
-            <p class="text-semi-bold text-white text-center h1">It's what you do.</p>
-        </div>
-    </div>
-
   </header>
   <!-- .......................HEADER ENDS HERE.................... -->
 
-  <!-- .......................GRID SECTION STARTS HERE.................... -->
-    <section id="first-grid" class="first-grid-size grid-property">
-      <div class="hover-content item1 img-cover">
-        <img src="assets/images/1.jpg" alt="">
-        <a href="#">
-        <div class="secondary-content img-cover put-center bg-lighter-black">
-          <p class="text-white text-regular text-center h3">Happy Miles</p>
-        </div>
-        </a>
-      </div>
-      <div class="hover-content item2 img-cover">
-        <img src="assets/images/2.jpg" alt="">
-        <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-          <img src="assets/images/15.jpg" alt="">
-          </div>
-        </a>
-      </div>
-      <div class="hover-content item3 img-cover">
-          <img src="assets/images/3.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item4 img-cover">
-          <img src="assets/images/4.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item5 img-cover">
-          <img src="assets/images/5.png" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-  </section>
+  <!-- ........................header-bg................................. -->
+  <div class=" bg-black">
+    <div class="center-content">
+        <p class="text-semi-bold text-white text-center h1">It's not what you say,</p>
+        <p class="text-semi-bold text-white text-center h1">It's what you do.</p>
+    </div>
+</div>
 
-  <section id="second-grid" class="second-grid-size grid-property">
-      <div class="hover-content item1 img-cover">
-          <img src="assets/images/6.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item2 img-cover">
-          <img src="assets/images/7.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item3 img-cover">
-          <img src="assets/images/8.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item4 img-cover">
-          <img src="assets/images/9.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-      <div class="hover-content item5 img-cover">
-          <img src="assets/images/10.jpg" alt="">
-          <a href="#OtherProject">
-          <div class="secondary-content img-cover">
-              <img src="assets/images/15.jpg" alt="">
-          </div>
-          </a>
-      </div>
-    </section>
+  <!-- .......................GRID SECTION STARTS HERE.................... -->
+  <section id="first-grid" class="first-grid-size grid-property">
+		<div class="hover-content item1 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail1-1.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumnail1-2.jpg" alt=""></li>
+				</ul>
+			</div>
+			<!-- <img src="assets/images/1.jpg" alt=""> -->
+			<a href="projects/happymiles.html">
+				<div class="secondary-content img-cover put-center p1">
+					<p class="text-white text-regular text-center display-5">Happy Miles</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item2 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail2.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/bbdtimes.html">
+				<div class="secondary-content img-cover put-center p2">
+					<p class="text-white text-regular text-center display-5">The BBD Times</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item3 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/dearzindagi.html">
+				<div class="secondary-content img-cover put-center p3">
+					<p class="text-white text-regular text-center display-5">Dear Zindagi</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item4 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail4-1.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumbnail4-2.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumbnail4-3.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/filmingeye.html">
+				<div class="secondary-content img-cover put-center p4">
+					<p class="text-white text-regular text-center display-5">Filming Eye</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item5 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail5.gif" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/elevito.html">
+				<div class="secondary-content img-cover put-center p5">
+					<p class="text-white text-regular text-center display-5">Elevito</p>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<section id="second-grid" class="second-grid-size grid-property">
+		<div class="hover-content item1 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail6-1.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumbnail6-2.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/awesomeinc.html">
+				<div class="secondary-content img-cover put-center p6">
+					<p class="text-white text-regular text-center display-5">Awesome Inc.</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item2 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail7.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/mrirritating.html">
+				<div class="secondary-content img-cover put-center p7">
+					<p class="text-white text-regular text-center display-5">Mr Irritating</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item3 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail8-1.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumbnail8-2.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/r3.html">
+				<div class="secondary-content img-cover put-center p8">
+					<p class="text-white text-regular text-center display-5">Read.Recite.Repeat.</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item4 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail9-1.jpg" alt=""></li>
+					<li><img src="assets/images/thumbnail/thumbnail9-2.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/tbtapp.html">
+				<div class="secondary-content img-cover put-center p9">
+					<p class="text-white text-regular text-center display-5">TBT App</p>
+				</div>
+			</a>
+		</div>
+		<div class="hover-content item5 img-cover">
+			<div class="slide-wrapper">
+				<ul class="rslides">
+					<li><img src="assets/images/thumbnail/thumbnail10.jpg" alt=""></li>
+				</ul>
+			</div>
+			<a href="projects/hindigiri.html">
+				<div class="secondary-content img-cover put-center p10">
+					<p class="text-white text-regular text-center display-5">Hindigiri</p>
+				</div>
+			</a>
+		</div>
+	</section>
 
     <section id="third-grid" class="third-grid-size grid-property">
         <div class="hover-content item1 img-cover">
-            <img src="assets/images/1.jpg" alt="">
-            <a href="#">
-            <div class="secondary-content img-cover put-center bg-lighter-black">
-                <!-- <img src="assets/images/15.jpg" alt=""> -->
-                <p class="text-white text-regular text-center">Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, eveniet.</p>
+            <div class="slide-wrapper">
+                <ul class="rslides">
+                    <li><img src="assets/images/thumbnail/thumbnail11.jpg" alt=""></li>
+                </ul>
             </div>
+            <a href="#FeedingTrends">
+                <div class="secondary-content img-cover put-center p11">
+                    <p class="text-white text-regular text-center display-5">Feeding Trends</p>
+                </div>
             </a>
         </div>
         <div class="hover-content item2 img-cover">
-            <img src="assets/images/2.jpg" alt="">
-            <a href="#OtherProject">
-                <div class="secondary-content img-cover">
-                <img src="assets/images/15.jpg" alt="">
+            <div class="slide-wrapper">
+                <ul class="rslides">
+                    <li><img src="assets/images/thumbnail/thumbnail12.jpg" alt=""></li>
+                </ul>
+            </div>
+            <a href="projects/bharatrohan.html">
+                <div class="secondary-content img-cover put-center p12">
+                    <p class="text-white text-regular text-center display-5">Bharat-Rohan</p>
                 </div>
             </a>
         </div>
         <div class="hover-content item3 img-cover">
-            <img src="assets/images/3.jpg" alt="">
-            <a href="#OtherProject">
-            <div class="secondary-content img-cover">
-                <img src="assets/images/15.jpg" alt="">
+            <div class="slide-wrapper">
+                <ul class="rslides">
+                    <li><img src="assets/images/thumbnail/thumbnail13.jpg" alt=""></li>
+                </ul>
             </div>
+            <a href="projects/projectsacademia.html">
+                <div class="secondary-content img-cover put-center p13">
+                    <p class="text-white text-regular text-center display-5">Projects Academia</p>
+                </div>
             </a>
         </div>
         <div class="hover-content item4 img-cover">
-            <img src="assets/images/4.jpg" alt="">
-            <a href="#OtherProject">
-            <div class="secondary-content img-cover">
-                <img src="assets/images/15.jpg" alt="">
+            <div class="slide-wrapper">
+                <ul class="rslides">
+                    <li><img src="assets/images/thumbnail/thumbnail14.jpg" alt=""></li>
+                </ul>
             </div>
+            <a href="#PlayWithArts">
+                <div class="secondary-content img-cover put-center p14">
+                    <p class="text-white text-regular text-center display-5">Play With Arts</p>
+                </div>
             </a>
         </div>
         <div class="hover-content item5 img-cover">
-            <img src="assets/images/5.png" alt="">
-            <a href="#OtherProject">
-            <div class="secondary-content img-cover">
-                <img src="assets/images/15.jpg" alt="">
+            <div class="slide-wrapper">
+                <ul class="rslides">
+                    <li><img src="assets/images/thumbnail/thumbnail15.jpg" alt=""></li>
+                </ul>
             </div>
+            <a href="projects/ialse.html">
+                <div class="secondary-content img-cover put-center p15">
+                    <p class="text-white text-regular text-center display-5">IALSE</p>
+                </div>
             </a>
         </div>
     </section>
@@ -198,8 +291,8 @@
     <div class="footer-wrapper">
         <div class="footer-content-flex">
         <div class="tagline">
-            <p class="text-white text-semi-bold h1">Don't stay thinking,</p>
-            <p class="text-white text-semi-bold h1">talk to us.</p>
+            <p class="text-white text-semi-bold display-4">Don't stay thinking,</p>
+            <p class="text-white text-semi-bold display-4">talk to us.</p>
             <p class="text-white text-regular h6">We reply to everyone right away,</p>
   					<p class="text-white text-regular h6">See for yourself.</p>
         </div>

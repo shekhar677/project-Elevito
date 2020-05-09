@@ -15,7 +15,7 @@
     <nav class="navigation-bar clearfix">
       <div class="logo float-left">
         <a href="index.html">
-          <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.52 47.93"><defs></defs><title>ELEVITO</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M15.34,12.1v5.69H37V29.43H15.34v5.76H39.82V46.83H0V.46H39.22V12.1Z"/><path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" d="M80.29,34.06V46.83H45.63V.46H61v33.6Z"/><path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" d="M99.61,35.19V29.44H121.3V17.79H99.61V12.1h23.87v0L117.1.46H84.26V46.83h39.82V35.19Z"/><path id="_Compound_Path_4" data-name="&lt;Compound Path&gt;" d="M184.09.9,177.88,13V47.27h15.34V.9Z"/><path id="_Compound_Path_5" data-name="&lt;Compound Path&gt;" d="M228.69,13V47.27H213.35V13H200.19V.9h41.73V13Z"/><path id="_Compound_Path_6" data-name="&lt;Compound Path&gt;" d="M295.52,24.05c0,13.76-10.72,23.88-25.47,23.88s-25.46-10-25.46-23.88S255.3.44,270.05.44,295.52,10.36,295.52,24.05Zm-35.19.07c0,6.35,4.63,11.05,9.92,11.05s9.52-4.7,9.52-11-4.23-10.91-9.52-10.91S260.33,17.77,260.33,24.12Z"/><polygon points="125.33 0 176.52 0 150.97 46.37 125.33 0"/></g></g></svg>
+          <svg id="logo" class="logo-adjust" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295.52 47.93"><defs></defs><title>ELEVITO</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" d="M15.34,12.1v5.69H37V29.43H15.34v5.76H39.82V46.83H0V.46H39.22V12.1Z"/><path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" d="M80.29,34.06V46.83H45.63V.46H61v33.6Z"/><path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" d="M99.61,35.19V29.44H121.3V17.79H99.61V12.1h23.87v0L117.1.46H84.26V46.83h39.82V35.19Z"/><path id="_Compound_Path_4" data-name="&lt;Compound Path&gt;" d="M184.09.9,177.88,13V47.27h15.34V.9Z"/><path id="_Compound_Path_5" data-name="&lt;Compound Path&gt;" d="M228.69,13V47.27H213.35V13H200.19V.9h41.73V13Z"/><path id="_Compound_Path_6" data-name="&lt;Compound Path&gt;" d="M295.52,24.05c0,13.76-10.72,23.88-25.47,23.88s-25.46-10-25.46-23.88S255.3.44,270.05.44,295.52,10.36,295.52,24.05Zm-35.19.07c0,6.35,4.63,11.05,9.92,11.05s9.52-4.7,9.52-11-4.23-10.91-9.52-10.91S260.33,17.77,260.33,24.12Z"/><polygon points="125.33 0 176.52 0 150.97 46.37 125.33 0"/></g></g></svg>
         </a>
       </div>
 
@@ -41,16 +41,16 @@
       </div>
     </nav>
 
-<!-- ........................header-bg image................................. -->
-    <div class="cover-whole-box img-cover">
-      <img src="assets/images/contact.jpg" alt="">
-    </div>
-
-    <div class="center-content">
-      <p class="text-semi-bold text-white text-center h2">Lorem ipsum dolor sit amet, vitae minus, nostrum. Voluptas a molestiae adipisci minus saepe.</p>
-    </div>
+    <!-- <div class="center-content">
+      <p class="text-semi-bold text-white text-center h2">If you'd like to meet us for a project or share your dreams with us, or simply want to know more about us, please feel free to get in touch.</p>
+    </div> -->
   </header>
   <!-- .......................HEADER ENDS HERE.................... -->
+
+  <!-- ........................header-bg image................................. -->
+  <div class="img-cover">
+    <img src="assets/images/contact.jpg" alt="">
+  </div>
 
 
   <!-- ....................................CONTACT-FORM SECTION STARTS HERE.............................................. -->
@@ -62,19 +62,54 @@
           <span>What's your name?</span>
           <input type="text" id="name" value="" placeholder="Your Name" autocomplete="off">
         </label>
+        <label for="reach">
+          <span>How can we reach you?</span>
+          <input type="email" id="reach"value="" placeholder="Your Email" autocomplete="off">
+        </label>
+        <label for="contact">
+          <span>Contact number</span>
+          <input type="tel" id="contact" value="" placeholder="Contact number" autocomplete="off">
+        </label>
+        <label for="country">
+          <span>Your country</span>
+          <input type="text" id="country" value="" placeholder="Your Country" autocomplete="off">
+        </label>
+        <label for="service">
+          <span>How can we help you?</span>
+          <select>
+            <option value="branding">Branding</option>
+            <option value="logo">Logo and Brand Identity</option>
+            <option value="corporate identity">Corporate Identity</option>
+            <option value="rebranding">ReBranding</option>
+            <option value="rebranding">Web/Mobile Development Designs</option>
+            <option value="rebranding">Content Designs</option>
+            <option value="rebranding">Print Advertisment Designs</option>
+            <option value="rebranding">Online Advertisment Designs</option>
+            <option value="rebranding">Merchandise</option>
+            <option value="rebranding">Publication Designs</option>
+            <option value="rebranding">Cover Designs</option>
+            <option value="rebranding">Business Stationary Designs</option>
+            <option value="rebranding">Custom Illustration</option>
+            <option value="rebranding">Refreshed Designs</option>
+            <option value="rebranding">Animation and Motion Design</option>
+          </select>
+        </label>
         <label for="work">
           <span>Where do you work?</span>
           <input type="text" id="work" value="" placeholder="Your Company" autocomplete="off">
         </label>
-        <label for="reach">
-          <span>How can we reach you?</span>
-          <input type="email" id="reach"value="" placeholder="Your Email" autocomplete="off">
+        <label for="work">
+          <span>Company or Individual?</span>
+          <select>
+            <option value="company">Company</option>
+            <option value="individual">Individual</option>
+          </select>
         </label>
         <label for="about">
           Could you tell us a bit more about your need?
           <textarea class="collapsed" id="about" placeholder=""></textarea>
         </label>
-        <button class="btn-send" type="submit"><span class="text-semi-bold">SEND</span></button>
+        <button class="btn-send" type="submit"><p class="text-semi-bold">SEND</p></button>
       </div>
       <div class="links-content">
         <a href="mailto:yash@elevito.com">
@@ -132,7 +167,7 @@
     <div class="join-team-img img-cover">
       <img src="assets/images/about.jpg" alt="">
     </div>
-    <a href="#join">
+    <a href="#" onclick="return false;" class="openmodal">
       <div class="join-rectangle img-cover">
         <div class="join">
           <p class="text-white text-semi-bold h2">Join</p>
@@ -147,6 +182,51 @@
   <!-- ......................................JOIN OUR TEAM SECTION ENDS HERE...................................... -->
 
 
+  <!-- Join our team modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-content_box">
+        <h2 class="h2 text-semi-bold text-center text-lighter-black">Join Our Team</h2>
+        <form action="#send data">
+          <div class="form-content">
+            <label for="name">
+              <span>What's your name?</span>
+              <input type="text" id="name" value="" placeholder="Your Name" autocomplete="off">
+            </label>
+            <label for="reach">
+              <span>How can we reach you?</span>
+              <input type="email" id="reach"value="" placeholder="Your Email" autocomplete="off">
+            </label>
+            <label for="contact">
+              <span>Contact number</span>
+              <input type="tel" id="contact" value="" placeholder="Contact number" autocomplete="off">
+            </label>
+            <label for="job_profile">
+              <span>Job profile</span>
+              <input type="text" id="job_profile" value="" placeholder="Job profile" autocomplete="off">
+            </label>
+            <label for="portfolio">
+              <span>Share portfolio link</span>
+              <input type="text" id="portfolio" value="" placeholder="Your portfolio link" autocomplete="off">
+            </label>
+            <label for="position">
+              Tell us about your position
+              <textarea class="collapsed" id="position" placeholder=""></textarea>
+            </label>
+            <label for="about">
+              Why do you want to join us?
+              <textarea class="collapsed" id="about" placeholder=""></textarea>
+            </label>
+            <button class="btn-send" type="submit"><p class="text-semi-bold">SEND</p></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- modal ends -->
+
+
 
 
   <!-- .......................FOOTER START HERE...................................... -->
@@ -154,8 +234,8 @@
     <div class="footer-wrapper">
       <div class="footer-content-flex">
       <div class="tagline">
-        <p class="text-white text-semi-bold h1">Don't stay thinking,</p>
-        <p class="text-white text-semi-bold h1">talk to us.</p>
+        <p class="text-white text-semi-bold display-4">Don't stay thinking,</p>
+        <p class="text-white text-semi-bold display-4">talk to us.</p>
         <p class="text-white text-regular h6">We reply to everyone right away,</p>
         <p class="text-white text-regular h6">See for yourself.</p>
       </div>
@@ -212,5 +292,6 @@
     <!-- ..............FOOTER ENDS HERE............................. -->
 
   <script src="script/main.js"></script>
+  <script src="script/modal.js"></script>
 </body>
 </html>
